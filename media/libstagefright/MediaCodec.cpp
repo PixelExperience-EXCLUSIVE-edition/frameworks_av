@@ -1167,10 +1167,7 @@ void MediaCodec::flushMediametrics() {
 
     // ensure mutex while we do our own work
     Mutex::Autolock _lock(mMetricsLock);
-<<<<<<< HEAD
     mHdrInfoFlags = 0;
-=======
->>>>>>> de080022ddecc4846b23638b50fbf64543819561
     if (mMetricsHandle != 0) {
         if (mediametrics_count(mMetricsHandle) > 0) {
             mediametrics_selfRecord(mMetricsHandle);
